@@ -9,7 +9,8 @@ class Program
         string promptName = UserName();
         int promptNumber = FavoriteNumber();
         int squaredNumber = Square(promptNumber);
-        Console.WriteLine($"{promptName}, the square of your number is {squaredNumber}");
+        DisplayResult(squaredNumber, promptName);
+        
     }
     static void Display()
     {
@@ -34,5 +35,9 @@ class Program
         int squared = number * number;
 
         return squared;
+    }
+    static void DisplayResult(int squared, string name)
+    {
+        Console.WriteLine($"{name}, the square of your number is {squared}");
     }
 }
